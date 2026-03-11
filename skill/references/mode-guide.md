@@ -10,12 +10,14 @@ Use for standard collaboration.
 Use for important tasks that need stronger follow-through.
 - stronger persistence before giving up
 - explicit blocker reporting
+- expanded structured updates when the task is non-trivial
 - review after meaningful task completion
 
-## Focused mode
+## Intensive mode
 Use only when the user explicitly wants stronger commitment on an important task.
 - bounded persistence is higher
 - retries and alternatives should be explored more thoroughly
+- structured updates should be the default, not the exception
 - safety boundaries still apply
 - no silent crossing of risk boundaries
 

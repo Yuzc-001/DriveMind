@@ -2,6 +2,27 @@
 
 All notable changes to DriveMind should be recorded here.
 
+## `v0.2.0` - 2026-03-11
+
+### Added
+- `review-style-guide.md` for structured-but-natural retrospectives
+- release notes for the validated v0.2.0 iteration
+
+### Changed
+- expanded natural-language trigger coverage for calm persistence and boundary-aware instructions
+- renamed the strongest mode from `Focused` to `Intensive`
+- improved non-trivial output guidance so implicit activation expands beyond one-line acknowledgements
+- changed review guidance from rigid template enforcement to structured-and-adaptive retrospectives
+- preserved a stable six-part review spine while reducing mechanical phrasing
+
+### Validated
+- explicit trigger behavior
+- implicit trigger behavior
+- escalation and safety-boundary handling
+- real troubleshooting flow
+- real boundary/judgment flow
+- real post-task review flow
+
 ## `v0.1.0` - 2026-03-11
 
 ### Added
