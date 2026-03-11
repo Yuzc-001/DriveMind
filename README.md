@@ -188,35 +188,6 @@ When DriveMind is active, the agent should:
 - configurable execution intensity
 - shared memory across roles or agents.
 
-## Install as a skill
-
-DriveMind is already packaged as a distributable skill:
-- `dist/drivemind.skill`
-
-### Option 1: Download from GitHub
-1. Open the repository: `https://github.com/Yuzc-001/DriveMind`
-2. Download `dist/drivemind.skill`
-3. Import/install it into your skill environment
-
-### Option 2: Install from local source
-If you already have this repo locally, use the packaged file at:
-- `dist/drivemind.skill`
-
-### What the installed skill includes
-- execution modes
-- persistence protocol
-- escalation rules
-- daily diary template
-- review template
-- distillation template
-
-After installation, activate it with instructions such as:
-- `Enable DriveMind in execution mode.`
-- `Use DriveMind for this task.`
-- `Do not give up too early, but stop at unclear risk boundaries.`
-
----
-
 ## Usage boundary
 
 DriveMind is currently **source-available under BUSL-1.1**, not Open Source.
