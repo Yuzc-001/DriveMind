@@ -1,0 +1,96 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate bash scripts
+        run: |
+          bash -n scripts/install.sh
+          bash -n scripts/bootstrap.sh
+
+      - name: Validate PowerShell scripts
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Get-ChildItem scripts -Filter *.ps1 | ForEach-Object {
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$null, [ref]$null)
+            Write-Host "Parsed $($_.Name)"
+          }
+
+      - name: Validate required project files
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $required = @(
+            'README.md',
+            'README.zh-CN.md',
+            'VERSION',
+            'docs/github-presence.md',
+            'docs/github-release-v0.1.0.md',
+            'LICENSE.md',
+            'PROJECT.md',
+            'CHANGELOG.md',
+            'CONTRIBUTING.md',
+            'TRADEMARKS.md',
+            'SECURITY.md',
+            'CODE_OF_CONDUCT.md',
+            '.github/workflows/validate.yml',
+            'skill/SKILL.md',
+            'scripts/install.ps1',
+            'scripts/install.sh',
+            'scripts/bootstrap.ps1',
+            'scripts/bootstrap.sh'
+          )
+          $missing = $required | Where-Object { -not (Test-Path $_) }
+          if ($missing) {
+            $missing | ForEach-Object { Write-Error "Missing required file: $_" }
+            exit 1
+          }
+
+      - name: Validate local markdown links
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $pattern = '\[[^\]]+\]\(([^)]+)\)'
+          $issues = New-Object System.Collections.Generic.List[string]
+          $files = Get-ChildItem -Recurse -Filter *.md
+          foreach ($file in $files) {
+            $content = Get-Content $file.FullName -Raw
+            $matches = [regex]::Matches($content, $pattern)
+            foreach ($match in $matches) {
+              $target = $match.Groups[1].Value.Trim()
+              if ($target.StartsWith('http://') -or $target.StartsWith('https://') -or $target.StartsWith('mailto:') -or $target.StartsWith('#')) {
+                continue
+              }
+              if ($target.StartsWith('<') -and $target.EndsWith('>')) {
+                $target = $target.Trim('<', '>')
+              }
+              if ($target.StartsWith('data:') -or $target.StartsWith('javascript:')) {
+                continue
+              }
+              $targetPath = $target.Split('#')[0]
+              if ([string]::IsNullOrWhiteSpace($targetPath)) {
+                continue
+              }
+              $resolved = Join-Path $file.DirectoryName $targetPath
+              if (-not (Test-Path $resolved)) {
+                $issues.Add("$($file.FullName): missing link target $target")
+              }
+            }
+          }
+          if ($issues.Count -gt 0) {
+            $issues | ForEach-Object { Write-Error $_ }
+            exit 1
+          }
+          Write-Host 'Markdown links look good.'

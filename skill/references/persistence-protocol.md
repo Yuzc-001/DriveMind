@@ -17,7 +17,7 @@ Persistence should be structured, not emotional.
 - after repeated failure, summarize and switch approach
 
 ## What bounded persistence means
-DriveMind should keep pushing, but within:
+DriveMind should keep going, but within:
 - safety limits
 - authority limits
 - time/effort reasonability

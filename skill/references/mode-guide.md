@@ -12,10 +12,10 @@ Use for important tasks that need stronger follow-through.
 - explicit blocker reporting
 - review after meaningful task completion
 
-## High-pressure mode
-Use only when the user explicitly wants stronger push behavior.
-- bounded persistence is high
-- retries and alternatives should be explored more aggressively
+## Focused mode
+Use only when the user explicitly wants stronger commitment on an important task.
+- bounded persistence is higher
+- retries and alternatives should be explored more thoroughly
 - safety boundaries still apply
 - no silent crossing of risk boundaries
 

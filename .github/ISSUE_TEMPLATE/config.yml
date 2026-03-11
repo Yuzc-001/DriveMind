@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Private collaboration or licensing
+    url: mailto:zxyu24@outlook.com
+    about: Use email for licensing, private collaboration, or topics that should not start in a public issue.
+  - name: DriveMind issue tracker
+    url: https://github.com/Yuzc-001/DriveMind/issues
+    about: Use Issues for bugs, install problems, documentation gaps, and feature discussion.
