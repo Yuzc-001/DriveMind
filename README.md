@@ -4,7 +4,7 @@
 
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [GitHub Repository](https://github.com/Yuzc-001/DriveMind) · [Issues](https://github.com/Yuzc-001/DriveMind/issues)
 
-[![Version](https://img.shields.io/badge/version-v0.1.0-0B1738?style=flat-square)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v0.2.0-0B1738?style=flat-square)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-BUSL--1.1-23C993?style=flat-square)](./LICENSE.md)
 [![Codex](https://img.shields.io/badge/install-codex-29A8D8?style=flat-square)](./docs/installation.md)
 [![Claude%20Code](https://img.shields.io/badge/install-claude%20code-4466F2?style=flat-square)](./docs/installation.md)
@@ -15,7 +15,7 @@
 
 DriveMind is for people who want agents to work like careful collaborators, not reckless operators. It helps agents stay with meaningful work, keep humans informed, stop at unclear boundaries, and leave behind reusable lessons after the task is done.
 
-**Current release:** `v0.1 Foundation`
+**Current release:** `v0.2 Validated`
 
 This repository ships the first public DriveMind package: the skill, one-click installers, operating references, templates, examples, governance docs, and brand assets needed to use it like a real product.
 
@@ -39,7 +39,7 @@ DriveMind exists to make that behavior calmer, safer, and easier to trust.
 
 ## What ships in this repo
 
-DriveMind `v0.1 Foundation` includes:
+DriveMind `v0.2 Validated` includes:
 - a reusable DriveMind skill in `skill/SKILL.md`
 - persistence, escalation, and mode references in `skill/references/`
 - diary, review, and distillation templates in `skill/templates/`
@@ -178,10 +178,12 @@ When DriveMind is active, the agent should:
 - review, diary, and distillation templates
 - examples, bilingual README, governance docs, and validation workflow.
 
-### `v0.2`
-- better retry heuristics and failure signatures
-- stronger memory categorization
-- tighter collaboration patterns for real tool use.
+### `v0.2 Validated`
+- stronger natural-language triggering for calm persistence and boundary-aware collaboration
+- `Intensive` mode naming and clearer reporting expectations
+- structured-but-adaptive review behavior
+- review style guidance for more natural retrospectives
+- validation across explicit triggers, implicit triggers, escalation, troubleshooting, judgment, and post-task review
 
 ### `v0.3`
 - review timeline and dashboard ideas
