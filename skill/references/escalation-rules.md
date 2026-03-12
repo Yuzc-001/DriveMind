@@ -10,6 +10,8 @@ Examples:
 - external side effects are uncertain
 - security/privacy impact is non-trivial
 - cost implications are unclear
+- pressure is high but authorization is still unclear
+- the user is asking for a high-impact action without a clear scope
 
 ### 2. Same failure repeats without new evidence
 Rule:
@@ -28,14 +30,17 @@ Examples:
 - credentials required
 - permission required
 - release decision required
+- external communication needs human confirmation
+- production action needs explicit approval
 
 ## Escalation output format
 When escalating, report:
 1. current objective
-2. what was attempted
-3. what boundary was reached
-4. what decision is needed
+2. what was attempted or what is already known
+3. what boundary, blocker, or missing authority was reached
+4. what decision or confirmation is needed
 5. recommended next option
+6. the safest useful action that can still be taken now, if one exists
 
 ## Rule of thumb
 Escalation is not failure.
