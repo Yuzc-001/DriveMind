@@ -6,6 +6,7 @@
 
 [![Version](https://img.shields.io/badge/version-v0.2.0-0B1738?style=flat-square)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-BUSL--1.1-23C993?style=flat-square)](./LICENSE.md)
+[![Validated](https://img.shields.io/badge/validated-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-5B6CFF?style=flat-square)](./docs/github-release-v0.2.0.md)
 [![Codex](https://img.shields.io/badge/install-codex-29A8D8?style=flat-square)](./docs/installation.md)
 [![Claude%20Code](https://img.shields.io/badge/install-claude%20code-4466F2?style=flat-square)](./docs/installation.md)
 
@@ -16,6 +17,8 @@
 DriveMind is for people who want agents to work like careful collaborators, not reckless operators. It helps agents stay with meaningful work, keep humans informed, stop at unclear boundaries, and leave behind reusable lessons after the task is done.
 
 **Current release:** `v0.2 Validated`
+
+DriveMind v0.2.0 has now been validated across **Claude Code**, **Codex**, and **OpenClaw**.
 
 This repository ships the first public DriveMind package: the skill, one-click installers, operating references, templates, examples, governance docs, and brand assets needed to use it like a real product.
 
@@ -49,6 +52,16 @@ DriveMind `v0.2 Validated` includes:
 - a minimal validation workflow in `.github/workflows/`
 - first-party logo assets in `assets/logo/`
 - practical walkthroughs and comparisons in `examples/`.
+
+## Host and validation status
+
+DriveMind currently has three validated host/workflow surfaces:
+- **Claude Code**
+- **Codex**
+- **OpenClaw**
+
+Current install documentation in this repository is focused on **Claude Code** and **Codex** targets.
+**OpenClaw** is already a validated host environment for DriveMind, even though its usage model is closer to skill hosting and workflow execution than a one-click bootstrap target in this repo.
 
 ## Install
 

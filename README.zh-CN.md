@@ -6,6 +6,7 @@
 
 [![Version](https://img.shields.io/badge/version-v0.2.0-0B1738?style=flat-square)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-BUSL--1.1-23C993?style=flat-square)](./LICENSE.md)
+[![Validated](https://img.shields.io/badge/validated-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-5B6CFF?style=flat-square)](./docs/github-release-v0.2.0.md)
 [![Codex](https://img.shields.io/badge/install-codex-29A8D8?style=flat-square)](./docs/installation.md)
 [![Claude%20Code](https://img.shields.io/badge/install-claude%20code-4466F2?style=flat-square)](./docs/installation.md)
 
@@ -16,6 +17,8 @@
 DriveMind 面向那些不希望 agent 像“莽撞执行器”一样工作的人。它希望 agent 更像一个有分寸的协作者：在重要任务上多坚持一点、在边界不清时先问人、在任务结束后留下可复用经验，而不是只给出一次性结果。
 
 **当前版本：** `v0.2 Validated`
+
+DriveMind v0.2.0 当前已经在 **Claude Code**、**Codex**、**OpenClaw** 三种宿主/工作流中完成验证。
 
 这个仓库现在已经包含了 DriveMind 的第一套公开产品形态：skill、本地与远程安装脚本、行为参考、模板、示例、治理文档和品牌资产，已经可以作为一个认真打磨的公开作品来理解和使用。
 
@@ -49,6 +52,16 @@ DriveMind `v0.2 Validated` 当前包含：
 - `.github/workflows/` 里的最小验证流程
 - `assets/logo/` 下的官方 logo 源资产
 - `examples/` 里的行为示例与对比演示。
+
+## 宿主与验证状态
+
+DriveMind 当前已经在三种宿主/工作流中完成验证：
+- **Claude Code**
+- **Codex**
+- **OpenClaw**
+
+当前仓库中的安装文档主要覆盖 **Claude Code** 和 **Codex** 两类安装目标。
+**OpenClaw** 已经是 DriveMind 的真实验证宿主环境，但它更偏向 skill hosting 与工作流承载，而不是这个仓库里的一键 bootstrap 目标。
 
 ## 安装
 

@@ -33,6 +33,7 @@ This version was validated through:
 - escalation and safety-boundary tests
 - review / lesson tests
 - three real task scenarios: boundary judgment, troubleshooting, and post-task review
+- validation across Claude Code, Codex, and OpenClaw host/workflow surfaces
 
 ## Outcome
 DriveMind v0.2.0 is the first version that feels not only structured, but genuinely usable in real work.
