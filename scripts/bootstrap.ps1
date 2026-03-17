@@ -1,8 +1,7 @@
 [CmdletBinding()]
 param(
     [Parameter(Position = 0)]
-    [ValidateSet('codex', 'codex-personal', 'claude', 'claude-personal', 'claude-project', 'custom')]
-    [string]$Target = 'codex-personal',
+    [string]$Target = '',
 
     [Parameter(Position = 1)]
     [string]$Path,
@@ -33,11 +32,57 @@ try {
         throw "Could not find installer at $installer"
     }
 
-    if ($PSBoundParameters.ContainsKey('Path')) {
-        & $installer $Target $Path
+    function Invoke-Install {
+        param([string]$T, [string]$P = '')
+        if ($P) {
+            & $installer $T $P
+        } else {
+            & $installer $T
+        }
     }
-    else {
-        & $installer $Target
+
+    # Auto-detect mode: no target specified
+    if (-not $Target) {
+        $targets = @()
+
+        $claudeDir = Join-Path $HOME '.claude'
+        if (Test-Path $claudeDir) {
+            $targets += 'claude-personal'
+        }
+
+        $codexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME '.codex' }
+        if (Test-Path $codexHome) {
+            $targets += 'codex-personal'
+        }
+
+        if ($targets.Count -eq 0) {
+            Write-Host "No AI tool directories detected. Installing to ~/.claude/skills as default."
+            $targets += 'claude-personal'
+        }
+
+        Write-Host ""
+        Write-Host "Detected targets: $($targets -join ', ')"
+        Write-Host ""
+
+        foreach ($t in $targets) {
+            Invoke-Install -T $t
+        }
+
+        Write-Host ""
+        Write-Host "DriveMind install complete."
+        return
+    }
+
+    # Explicit target mode
+    $validTargets = @('codex', 'codex-personal', 'claude', 'claude-personal', 'claude-project', 'custom')
+    if ($Target -notin $validTargets) {
+        throw "Unknown target: $Target. Supported: $($validTargets -join ' | ')"
+    }
+
+    if ($PSBoundParameters.ContainsKey('Path')) {
+        Invoke-Install -T $Target -P $Path
+    } else {
+        Invoke-Install -T $Target
     }
 }
 finally {

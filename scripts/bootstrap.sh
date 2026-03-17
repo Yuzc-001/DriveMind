@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-target="${1:-codex-personal}"
+target="${1:-}"
 path_arg="${2:-}"
 repo="${DRIVEMIND_REPO:-Yuzc-001/DriveMind}"
 ref="${DRIVEMIND_REF:-main}"
@@ -25,8 +25,46 @@ if [[ -z "$checkout" ]]; then
   exit 1
 fi
 
-if [[ -n "$path_arg" ]]; then
-  bash "$checkout/scripts/install.sh" "$target" "$path_arg"
-else
-  bash "$checkout/scripts/install.sh" "$target"
+run_install() {
+  local t="$1"
+  local p="${2:-}"
+  if [[ -n "$p" ]]; then
+    bash "$checkout/scripts/install.sh" "$t" "$p"
+  else
+    bash "$checkout/scripts/install.sh" "$t"
+  fi
+}
+
+# Auto-detect mode: no target specified
+if [[ -z "$target" ]]; then
+  targets=()
+
+  if [[ -d "$HOME/.claude" ]]; then
+    targets+=("claude-personal")
+  fi
+
+  codex_home="${CODEX_HOME:-$HOME/.codex}"
+  if [[ -d "$codex_home" ]]; then
+    targets+=("codex-personal")
+  fi
+
+  if [[ ${#targets[@]} -eq 0 ]]; then
+    echo "No AI tool directories detected. Installing to ~/.claude/skills as default."
+    targets+=("claude-personal")
+  fi
+
+  echo ""
+  echo "Detected targets: ${targets[*]}"
+  echo ""
+
+  for t in "${targets[@]}"; do
+    run_install "$t"
+  done
+
+  echo ""
+  echo "DriveMind install complete."
+  exit 0
 fi
+
+# Explicit target mode
+run_install "$target" "$path_arg"

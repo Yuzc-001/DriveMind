@@ -1,5 +1,28 @@
 # Installation
 
+## Quickstart — zero configuration
+
+The installer auto-detects which AI tools you have installed (Claude Code, Codex) and installs DriveMind to all of them. No flags, no choices.
+
+### macOS / Linux
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.sh | bash
+```
+
+### Windows PowerShell
+
+```powershell
+irm https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.ps1 | iex
+```
+
+**What happens:**
+- Detects `~/.claude` → installs `claude-personal`
+- Detects `~/.codex` (or `$CODEX_HOME`) → installs `codex-personal`
+- Neither found → installs `claude-personal` as default
+
+---
+
 DriveMind ships as one portable skill package with multiple install targets:
 - personal skill install
 - project skill install
@@ -18,7 +41,7 @@ Aliases kept for convenience:
 - `codex` = `codex-personal`
 - `claude` = `claude-personal`
 
-## One-click install
+## Install to a specific target
 
 ### Windows PowerShell
 

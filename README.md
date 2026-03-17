@@ -4,7 +4,7 @@
 
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [GitHub Repository](https://github.com/Yuzc-001/DriveMind) · [Issues](https://github.com/Yuzc-001/DriveMind/issues)
 
-[![Version](https://img.shields.io/badge/version-v0.3.0-0B1738?style=flat-square)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v0.4.0-0B1738?style=flat-square)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-BUSL--1.1-23C993?style=flat-square)](./LICENSE.md)
 [![Validated](https://img.shields.io/badge/validated-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-5B6CFF?style=flat-square)](./docs/github-release-v0.3.0.md)
 [![Codex](https://img.shields.io/badge/install-codex-29A8D8?style=flat-square)](./docs/installation.md)
@@ -16,9 +16,9 @@
 
 DriveMind is for people who want agents to work like careful collaborators, not reckless operators. It helps agents stay with meaningful work, keep humans informed, stop at unclear boundaries, and leave behind reusable lessons after the task is done.
 
-**Current release:** `v0.3.0`
+**Current release:** `v0.4.0`
 
-DriveMind v0.3.0 is the formal release that builds on the validated v0.2 baseline and extends DriveMind into a stronger decision-and-reliability layer across **Claude Code**, **Codex**, and **OpenClaw**.
+DriveMind v0.4.0 builds on the v0.3 decision layer and adds context intelligence: cross-session continuity, confidence signaling, and a zero-config installer across **Claude Code**, **Codex**, and **OpenClaw**.
 
 This repository ships the first public DriveMind package: the skill, one-click installers, operating references, templates, examples, governance docs, and brand assets needed to use it like a real product.
 
@@ -65,41 +65,51 @@ Current install documentation in this repository is focused on **Claude Code** a
 
 ## Install
 
-DriveMind ships one portable skill package with multiple install targets.
+### One command — works automatically
 
-### One-click install
+The installer detects which AI tools you have installed (Claude Code, Codex) and installs to all of them. No flags needed.
 
-#### Codex personal skill
-
-```powershell
-$tmp = New-TemporaryFile; Invoke-WebRequest https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.ps1 -OutFile $tmp; & $tmp codex-personal; Remove-Item $tmp
-```
+**macOS / Linux**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.sh | bash -s -- codex-personal
+curl -fsSL https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.sh | bash
 ```
 
-#### Claude personal skill
+**Windows (PowerShell)**
 
 ```powershell
-$tmp = New-TemporaryFile; Invoke-WebRequest https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.ps1 -OutFile $tmp; & $tmp claude-personal; Remove-Item $tmp
+irm https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.ps1 | iex
 ```
 
+That's it. The installer finds your tools and installs DriveMind to each one. If nothing is detected, it defaults to `~/.claude/skills`.
+
+### Install to a specific target
+
+<details>
+<summary>Advanced: choose a specific install target</summary>
+
+**macOS / Linux**
+
 ```bash
+# Claude Code personal
 curl -fsSL https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.sh | bash -s -- claude-personal
-```
 
-#### Claude project skill
+# Codex personal
+curl -fsSL https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.sh | bash -s -- codex-personal
 
-```powershell
-$tmp = New-TemporaryFile; Invoke-WebRequest https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.ps1 -OutFile $tmp; & $tmp claude-project D:\path\to\your-project; Remove-Item $tmp
-```
-
-```bash
+# Claude project-local
 curl -fsSL https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.sh | bash -s -- claude-project /path/to/your-project
 ```
 
-### Install from a cloned repo
+**Windows (PowerShell)**
+
+```powershell
+$tmp = New-TemporaryFile; Invoke-WebRequest https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.ps1 -OutFile $tmp; & $tmp claude-personal; Remove-Item $tmp
+$tmp = New-TemporaryFile; Invoke-WebRequest https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.ps1 -OutFile $tmp; & $tmp codex-personal; Remove-Item $tmp
+$tmp = New-TemporaryFile; Invoke-WebRequest https://raw.githubusercontent.com/Yuzc-001/DriveMind/main/scripts/bootstrap.ps1 -OutFile $tmp; & $tmp claude-project D:\path\to\your-project; Remove-Item $tmp
+```
+
+**From a cloned repo**
 
 ```powershell
 ./scripts/install.ps1 codex-personal
@@ -112,6 +122,8 @@ bash ./scripts/install.sh codex-personal
 bash ./scripts/install.sh claude-personal
 bash ./scripts/install.sh claude-project /path/to/your-project
 ```
+
+</details>
 
 See [docs/installation.md](docs/installation.md) for the full install matrix, aliases, update flow, and target paths.
 
@@ -203,6 +215,12 @@ When DriveMind is active, the agent should:
 - explicit decision gates for high-impact actions, production/release decisions, external representation, and data/deletion work
 - stuck-resolution guidance so persistence becomes blocker diagnosis and momentum recovery instead of brute repetition
 - compression rule to keep short answers natural and avoid visible framework over-expansion
+
+### `v0.4 Context Intelligence`
+- session handoff protocol for cross-session continuity: passive by default, triggered by user signals, invisible on short tasks
+- confidence signaling reference: evidence-based / inference / hypothesis levels with verification paths
+- language consistency: all skill references translated to English
+- zero-config installer: auto-detects Claude Code and Codex, installs to all found targets with one command
 
 ## Usage boundary
 

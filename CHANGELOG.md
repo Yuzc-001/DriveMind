@@ -2,6 +2,22 @@
 
 All notable changes to DriveMind should be recorded here.
 
+## `v0.4.0` - 2026-03-17
+
+### Added
+- `session-handoff.md` for cross-session continuity: passive by default, triggered by user signals, one-line prompt in Execution/Intensive mode at natural stopping points
+- `confidence-signaling.md` for structured uncertainty communication: three levels (evidence-based, inference, hypothesis) with verification paths and anti-pattern guidance
+- zero-config auto-detect install: `bootstrap.sh` and `bootstrap.ps1` now detect installed AI tools and install to all targets automatically — no flags required
+- `irm ... | iex` support for Windows PowerShell one-liner install
+
+### Changed
+- translated `decision-gates.md`, `stuck-resolution.md`, and `task-typing.md` from Chinese to English for language consistency across all skill references
+- updated `SKILL.md` description to include session continuity triggers
+- updated `SKILL.md` to reference `session-handoff.md` and `confidence-signaling.md`
+- removed internal development note from `SKILL.md`
+- updated `docs/roadmap.md` to reflect accurate v0.4 direction
+- simplified README install section: zero-param command is now the primary path, advanced options folded into a collapsible block
+
 ## `v0.3.0` - 2026-03-12
 
 ### Added
