@@ -2,6 +2,19 @@
 
 All notable changes to DriveMind should be recorded here.
 
+## `v0.5.0` - 2026-03-20
+
+### Added
+- `PLAN.md` to define the next DriveMind upgrade around collaboration doctrine rather than rigid procedure
+- `docs/github-release-v0.5.0.md` for the new release line
+
+### Changed
+- upgraded product definition from a reliability-focused framing toward an explicit collaboration doctrine and reliability layer
+- re-centered the product around clear goals, clear boundaries, and enough freedom to act
+- updated README, README.zh-CN, PROJECT, principles, activation, interaction model, roadmap, brand-kit, GitHub presence, FAQ, promo materials, and skill guidance to reflect the new doctrine
+- clarified collaboration guidance with `steady, not silent` and `concise, not absent`
+- made explicit that DriveMind should not become an operations manual
+
 ## `v0.4.0` - 2026-03-17
 
 ### Added

@@ -7,7 +7,7 @@ Not yet. As of March 11, 2026, DriveMind is source-available under BUSL-1.1. It 
 Not by default before March 11, 2030. Production use before the Change Date requires separate permission from the licensor.
 
 ## Is it a prompt pack?
-No. DriveMind is intended as a reliability layer, not a one-off prompt trick.
+No. DriveMind is intended as a collaboration doctrine and reliability layer, not a one-off prompt trick.
 
 ## Is it a memory tool?
 Not only. Memory is one part, but DriveMind also focuses on persistence, review, boundaries, and collaboration.

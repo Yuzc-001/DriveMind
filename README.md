@@ -4,21 +4,23 @@
 
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [GitHub Repository](https://github.com/Yuzc-001/DriveMind) · [Issues](https://github.com/Yuzc-001/DriveMind/issues)
 
-[![Version](https://img.shields.io/badge/version-v0.4.0-0B1738?style=flat-square)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v0.5.0-0B1738?style=flat-square)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-BUSL--1.1-23C993?style=flat-square)](./LICENSE.md)
-[![Validated](https://img.shields.io/badge/validated-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-5B6CFF?style=flat-square)](./docs/github-release-v0.3.0.md)
+[![Validated](https://img.shields.io/badge/validated-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-5B6CFF?style=flat-square)](./docs/github-release-v0.5.0.md)
 [![Codex](https://img.shields.io/badge/install-codex-29A8D8?style=flat-square)](./docs/installation.md)
 [![Claude%20Code](https://img.shields.io/badge/install-claude%20code-4466F2?style=flat-square)](./docs/installation.md)
 
 > **A calm reliability layer for AI agents.**
 >
-> Thoughtful execution, clear safety boundaries, and human collaboration for real work.
+> Clear goals, clear boundaries, enough freedom to act — for real human-AI collaboration.
 
-DriveMind is for people who want agents to work like careful collaborators, not reckless operators. It helps agents stay with meaningful work, keep humans informed, stop at unclear boundaries, and leave behind reusable lessons after the task is done.
+DriveMind is for people who want agents to work like careful collaborators, not reckless operators. It helps agents stay with meaningful work, keep humans informed without disappearing or narrating everything, stop at unclear boundaries, and leave behind reusable lessons after the task is done.
 
-**Current release:** `v0.4.0`
+DriveMind is built on a simple idea: **the best collaborator — human or AI — needs clear goals, clear boundaries, and enough freedom to act. Not an operations manual.**
 
-DriveMind v0.4.0 builds on the v0.3 decision layer and adds context intelligence: cross-session continuity, confidence signaling, and a zero-config installer across **Claude Code**, **Codex**, and **OpenClaw**.
+**Current release:** `v0.5.0`
+
+DriveMind v0.5.0 builds on the v0.4 context intelligence layer and reframes DriveMind more explicitly as a collaboration doctrine: clear goals, clear boundaries, and enough freedom to act — without turning collaboration into an operations manual.
 
 This repository ships the first public DriveMind package: the skill, one-click installers, operating references, templates, examples, governance docs, and brand assets needed to use it like a real product.
 
@@ -159,7 +161,7 @@ DriveMind is not:
 - a memory plugin by itself
 - a permission slip for reckless retries.
 
-It is a reliability layer that makes agents steadier, more legible, and easier to supervise.
+It is a collaboration doctrine and reliability layer that makes agents steadier, more legible, easier to supervise, and freer to act inside clear goals and clear boundaries.
 
 ## Basic activation
 

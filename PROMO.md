@@ -1,10 +1,10 @@
 # DriveMind Promo Pack
 
 ## Core line
-DriveMind is a calm reliability layer for AI agents: thoughtful execution, clear safety boundaries, and human collaboration for real work.
+DriveMind is a calm reliability layer and collaboration doctrine for AI agents: clear goals, clear boundaries, enough freedom to act, and human collaboration for real work.
 
 ## GitHub release headline
-DriveMind v0.1 Foundation: an installable reliability layer for calm, human-in-the-loop agent work
+DriveMind: a calm reliability layer and collaboration doctrine for real human-in-the-loop agent work
 
 ## Chinese launch post
 DriveMind 想解决的不是“AI 会不会回答”，而是“AI agent 能不能像一个有分寸的合作伙伴那样，在真实工作里稳定推进”。
@@ -21,8 +21,8 @@ The `v0.1 Foundation` release turns DriveMind into a more complete project found
 The goal is not to make agents blindly try harder. The goal is to help them continue thoughtfully, escalate safely, and collaborate with humans more cleanly.
 
 ## Short release blurb
-DriveMind v0.1 packages the first reusable version of the project: skill behavior, one-click install, a standard source-available license model, operating rules, reusable templates, examples, governance docs, validation workflow, first logo assets, and a unified brand system for a reliability-focused agent layer.
+DriveMind is evolving from a reliability-focused agent layer toward a clearer collaboration doctrine: clear goals, clear boundaries, enough freedom to act, with calmer execution, reusable learning, and human collaboration in real work.
 
 ## Social short versions
 - CN: DriveMind 是一个更克制、更清楚边界的 AI 可靠性层，现在已经可以一键安装到 Codex 和 Claude Code，并采用更标准的 BUSL-1.1 source-available 方案，还带有治理文档和最小验证流程。
-- EN: DriveMind is a calm reliability layer for AI agents, now packaged as an installable, source-available skill with one-click entry points, governance docs, and lightweight validation.
+- EN: DriveMind is a calm reliability layer and collaboration doctrine for AI agents: clear goals, clear boundaries, enough freedom to act, packaged as an installable, source-available skill.

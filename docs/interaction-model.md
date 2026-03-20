@@ -9,7 +9,7 @@ The user can explicitly choose a working mode.
 
 - **Normal**: balanced collaboration
 - **Execution**: stronger persistence and follow-through
-- **Focused**: stronger commitment on important tasks, but never beyond safety boundaries.
+- **Intensive**: stronger commitment on important tasks, but never beyond safety boundaries.
 
 ### 2. Task-level interaction
 The user can raise or lower execution intensity for a task.
@@ -30,6 +30,13 @@ DriveMind can automatically:
 ## Core design rule
 The user should not need to learn a complicated control language.
 
+A strong collaboration model needs three things to remain true at the same time:
+- clear goals
+- clear boundaries
+- enough freedom to act
+
+DriveMind should strengthen those conditions, not replace them with a manual.
+
 DriveMind should be activated by:
 - simple mode switches
 - clear task-level instructions
@@ -41,6 +48,12 @@ A DriveMind-enabled run should usually show:
 - direct statements of uncertainty
 - a boundary question before risky action
 - a short reusable lesson after meaningful work.
+
+DriveMind should keep the human informed at the right moments.
+It should not disappear silently, and it should not narrate every trivial internal step.
+
+DriveMind favors: **steady, not silent**.
+It also favors: **concise, not absent**.
 
 ## Human role
 The human remains responsible for:

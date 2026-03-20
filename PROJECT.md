@@ -4,13 +4,13 @@
 DriveMind
 
 ## Category
-Reliability layer for AI agents
+Collaboration doctrine and reliability layer for AI agents
 
 ## One-line
-DriveMind adds calm persistence, clear escalation, and reusable memory to agent work.
+DriveMind gives agents clear goals, clear boundaries, and enough freedom to act — with calm reliability in real work.
 
 ## Product promise
-Help agents work like careful collaborators in long-running real tasks.
+Help agents work like careful collaborators in long-running real tasks by giving them clear goals, clear boundaries, and enough freedom to act.
 
 ## Core user value
 DriveMind helps agents:
@@ -65,7 +65,9 @@ The Change License is GPL-2.0-or-later.
 - diary, review, and distillation templates
 - a canonical brand kit and first logo assets
 - bilingual public entry points in English and Chinese
-- governance docs and a minimal validation workflow`r`n- GitHub repository presentation copy plus a social preview asset`r`n- examples and public-facing product docs.
+- governance docs and a minimal validation workflow
+- GitHub repository presentation copy plus a social preview asset
+- examples and public-facing product docs.
 
 ## `v0.1` success criteria
 - agents can switch execution modes with clear behavior changes
@@ -113,7 +115,11 @@ The Change License is GPL-2.0-or-later.
 - `docs/`
 - `scripts/`
 - `skill/`
-- `examples/``r`n- `VERSION``r`n
+- `examples/`
+- `VERSION`
 ## Product thesis
-Reliable agent collaboration requires more than intelligence.
-It requires calm judgment, explicit boundaries, reusable learning, and a portable way to apply those behaviors across tools.
+The best collaborator — human or AI — needs clear goals, clear boundaries, and enough freedom to act.
+Not an operations manual.
+
+DriveMind exists to make that true for agent work.
+It turns calm judgment, explicit boundaries, reusable learning, and human collaboration into a practical operating doctrine rather than a rigid script.

@@ -8,7 +8,7 @@ This file is the source of truth for public GitHub repository presentation.
 - Contact email: `zxyu24@outlook.com`
 
 ## About description
-A calm reliability layer for AI agents: thoughtful execution, clear safety boundaries, reusable memory, and one-click installation.
+A calm reliability layer and collaboration doctrine for AI agents: clear goals, clear boundaries, enough freedom to act, reusable memory, and practical human collaboration.
 
 ## Topics
 - ai
@@ -24,7 +24,7 @@ A calm reliability layer for AI agents: thoughtful execution, clear safety bound
 
 ## Social preview asset
 - Suggested file: `assets/social/drivemind-social-preview.png`
-- Suggested alt line: `DriveMind — A calm reliability layer for AI agents`
+- Suggested alt line: `DriveMind — A calm reliability layer and collaboration doctrine for AI agents`
 
 ## Notes
 - Keep About copy aligned with `docs/brand-kit.md`

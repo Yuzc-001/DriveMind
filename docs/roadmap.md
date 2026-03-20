@@ -28,4 +28,11 @@
 - zero-config auto-detect install: detects Claude Code and Codex, installs to all found targets
 
 ## Product principle
-DriveMind should mature as a calm reliability layer for agents working in long-lived real tasks.
+DriveMind should mature as a calm reliability layer and collaboration doctrine for agents working in long-lived real tasks.
+
+Its deeper direction is simple:
+- clear goals
+- clear boundaries
+- enough freedom to act
+
+Not an operations manual.

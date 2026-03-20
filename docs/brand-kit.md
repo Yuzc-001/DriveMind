@@ -3,13 +3,13 @@
 This is the single source of truth for DriveMind positioning, tone, and reusable public copy.
 
 ## Core positioning
-DriveMind is a calm reliability layer for AI agents.
+DriveMind is a calm reliability layer and collaboration doctrine for AI agents.
 
 ## Technical category
-The reliability layer for AI agents.
+A collaboration doctrine and calm reliability layer for AI agents.
 
 ## Supporting line
-Thoughtful execution, clear safety boundaries, and human collaboration for real work.
+Clear goals, clear boundaries, enough freedom to act — for real human-AI collaboration.
 
 ## Product promise
 DriveMind helps agents work like careful collaborators: stay with meaningful tasks, ask before overreaching, and leave behind lessons worth reusing.
@@ -46,21 +46,21 @@ DriveMind should feel:
 ## Approved copy
 
 ### GitHub repository description
-A calm reliability layer for AI agents: thoughtful execution, clear safety boundaries, reusable memory, and one-click installation.
+A calm reliability layer and collaboration doctrine for AI agents: clear goals, clear boundaries, enough freedom to act, thoughtful execution, reusable memory, and practical human collaboration.
 
 ### Short intro
 DriveMind helps agents work like careful collaborators: stay with important tasks, ask when the boundary is unclear, and preserve lessons worth reusing.
 
 ### Homepage hero
-Headline: DriveMind is a calm reliability layer for AI agents.
+Headline: DriveMind is a calm reliability layer and collaboration doctrine for AI agents.
 
 Supporting line: Thoughtful execution, clear safety boundaries, and human collaboration for real work.
 
 ### One-sentence description
-DriveMind gives agents steadier execution, clearer escalation, and reusable memory so people can trust the collaboration more.
+DriveMind gives agents clear goals, clear boundaries, and enough freedom to act — with steadier execution, clearer escalation, and reusable memory.
 
 ### Launch line
-DriveMind v0.1 Foundation turns the project into an installable, source-available reliability layer for human-in-the-loop agent work.
+DriveMind is evolving from a reliability layer into a clearer collaboration doctrine for human-in-the-loop agent work.
 
 ## Canonical language
 - calm reliability
