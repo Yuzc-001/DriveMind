@@ -30,6 +30,8 @@ DriveMind ships as one portable skill package with multiple install targets:
 
 The package stays the same. The install target changes.
 
+For normal use, install DriveMind as a personal/global skill. DriveMind is designed to improve execution quality across projects, so `codex-personal` or `claude-personal` is usually the right target. Use a project install only when a team or repository needs to pin a specific DriveMind copy.
+
 ## Supported targets
 
 - `codex-personal`: installs to `$CODEX_HOME/skills/drivemind` or `~/.codex/skills/drivemind`
