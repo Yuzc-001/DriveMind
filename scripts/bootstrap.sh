@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-target="${1:-}"
+target="${1:-auto}"
 path_arg="${2:-}"
 repo="${DRIVEMIND_REPO:-Yuzc-001/DriveMind}"
 ref="${DRIVEMIND_REF:-main}"
@@ -14,57 +14,25 @@ cleanup() {
 }
 trap cleanup EXIT
 
-archive_url="https://github.com/$repo/archive/refs/heads/$ref.tar.gz"
+fail() {
+  echo "DriveMind bootstrap error: $*" >&2
+  exit 1
+}
+
+command -v curl >/dev/null 2>&1 || fail "curl is required"
+command -v tar >/dev/null 2>&1 || fail "tar is required"
+
+archive_url="https://github.com/$repo/archive/$ref.tar.gz"
 echo "Downloading DriveMind from $archive_url"
 curl -fsSL "$archive_url" -o "$archive_path"
 tar -xzf "$archive_path" -C "$tmp_dir"
 
 checkout="$(find "$tmp_dir" -maxdepth 1 -type d -name "$repo_name-*" | head -n 1)"
-if [[ -z "$checkout" ]]; then
-  echo "Could not find extracted repository contents." >&2
-  exit 1
+[[ -n "$checkout" ]] || fail "could not find extracted DriveMind repository contents"
+[[ -f "$checkout/scripts/install.sh" ]] || fail "could not find installer in downloaded repository"
+
+if [[ -n "$path_arg" ]]; then
+  bash "$checkout/scripts/install.sh" "$target" "$path_arg"
+else
+  bash "$checkout/scripts/install.sh" "$target"
 fi
-
-run_install() {
-  local t="$1"
-  local p="${2:-}"
-  if [[ -n "$p" ]]; then
-    bash "$checkout/scripts/install.sh" "$t" "$p"
-  else
-    bash "$checkout/scripts/install.sh" "$t"
-  fi
-}
-
-# Auto-detect mode: no target specified
-if [[ -z "$target" ]]; then
-  targets=()
-
-  if [[ -d "$HOME/.claude" ]]; then
-    targets+=("claude-personal")
-  fi
-
-  codex_home="${CODEX_HOME:-$HOME/.codex}"
-  if [[ -d "$codex_home" ]]; then
-    targets+=("codex-personal")
-  fi
-
-  if [[ ${#targets[@]} -eq 0 ]]; then
-    echo "No AI tool directories detected. Installing to ~/.claude/skills as default."
-    targets+=("claude-personal")
-  fi
-
-  echo ""
-  echo "Detected targets: ${targets[*]}"
-  echo ""
-
-  for t in "${targets[@]}"; do
-    run_install "$t"
-  done
-
-  echo ""
-  echo "DriveMind install complete."
-  exit 0
-fi
-
-# Explicit target mode
-run_install "$target" "$path_arg"

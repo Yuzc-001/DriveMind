@@ -1,8 +1,8 @@
 # Examples
 
-This folder contains small examples showing how DriveMind changes agent behavior.
+DriveMind v0.7 keeps examples in docs instead of carrying old walkthrough files.
 
-## Included
-- `example-session.md` — minimal session pattern
-- `with-vs-without-example.md` — side-by-side behavior comparison
-- `hard-task-walkthrough.md` — structured persistence and escalation example
+Start with:
+
+- [docs/drivemind-v0.7-stress-cases.md](../docs/drivemind-v0.7-stress-cases.md)
+- [docs/with-vs-without.md](../docs/with-vs-without.md)

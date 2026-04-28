@@ -5,3 +5,5 @@ __pycache__/
 .idea/
 .env
 assets/logo/*.png
+!assets/logo/drivemind-v0.7-lockup.png
+.claude/settings.local.json

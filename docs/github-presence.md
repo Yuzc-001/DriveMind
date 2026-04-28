@@ -2,28 +2,30 @@
 
 ## Repository description
 
-DriveMind is an execution-integrity layer for long-horizon human-AI work.
+DriveMind is an execution-ceiling layer for long-horizon human-AI work.
 
 ## Short tagline
 
-Keep meaningful work aligned, bounded, recoverable, and reusable.
+Keep meaningful work aligned, bounded, recoverable, stronger, and reusable.
 
 ## Suggested About copy
 
-DriveMind helps meaningful human-AI work resist degradation across time, pressure, and context boundaries.
+DriveMind helps meaningful human-AI work resist degradation and push the model toward stronger execution across time, pressure, and context boundaries.
 
 It focuses on:
 - drift prevention
 - boundary preservation
 - continuity preservation
 - stuck recovery
+- execution ceiling
 - closure that compounds future work
 
 ## Suggested alt lines
 
-- `DriveMind — execution integrity for long-horizon human-AI work`
+- `DriveMind — execution ceiling for long-horizon human-AI work`
 - `DriveMind — keep meaningful work from degrading over time`
 - `DriveMind — preserve thread, boundaries, continuity, and future residue`
+- `DriveMind — force the next move to be real`
 
 ## Suggested topics
 
@@ -31,6 +33,7 @@ It focuses on:
 - agent-skill
 - human-in-the-loop
 - execution-integrity
+- execution-ceiling
 - long-horizon-work
 - reliability
 - continuity
@@ -40,7 +43,7 @@ It focuses on:
 
 ## Social preview direction
 
-The repository should present DriveMind less like a calm doctrine and more like a layer that protects meaningful work from degradation.
+The repository should present DriveMind less like a calm doctrine and more like a layer that protects meaningful work from degradation and low-ceiling execution.
 
 The public GitHub surface should signal:
 - this is a real product layer

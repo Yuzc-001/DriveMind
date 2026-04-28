@@ -1,50 +1,34 @@
-# DriveMind Roadmap
+# Roadmap
 
-## `v0.6 Reset`
+## Current: v0.7 Execution Ceiling
 
-### Goal
-Rebuild DriveMind around execution integrity and experience compounding.
+Goal: make DriveMind a real execution-capability skill, not a collaboration doctrine.
 
-### Complete / in progress
-- product-center reset away from calm reliability doctrine
-- new `skill/SKILL.md`
-- new anti-degradation reference spine
-- closure residue selection layer
-- top-level repository messaging moved to `v0.6`
+Current shape:
 
-### What this version is trying to prove
-- meaningful work can degrade less under time, pressure, and interruption
-- closure can leave behind stronger future defaults
-- DriveMind can feel like a real execution layer instead of a mature doctrine bundle
+- compact runtime skill
+- Signal Gate identity
+- execution-ceiling reference
+- anti-drift, boundary, stuck, continuity, and closure references
+- hardened installers
+- stress cases for early stop, fake retry, weak blocker diagnosis, shallow deliverable, risky momentum, and capability underuse
 
----
+## Next: Evaluation Harness
 
-## `v0.7 Evidence`
+Target:
 
-### Goal
-Add stronger proof that the v0.6 model actually improves real work.
+- turn stress cases into repeatable checks
+- score whether DriveMind changes the next action, not just the wording
+- test early-stop prevention
+- test fake-retry prevention
+- test handoff fidelity
+- test residue quality
 
-### Target directions
-- stress-path validation
-- before/after examples for degraded vs protected work
-- stronger worked examples for drift prevention, stuck recovery, and continuity recovery
-- clearer compounding residue examples: next-time rule, lesson, diary continuity, SOP fragment
+## Later: Distribution Hardening
 
----
+Target:
 
-## `v0.8 Evaluation`
-
-### Goal
-Turn DriveMind from a strong contract into a more testable system.
-
-### Target directions
-- evaluator design for degradation resistance
-- representative long-horizon stress scenarios
-- consistency checks for continuity and residue quality
-- regressions for fake-motion behavior and boundary drift
-
----
-
-## Long-term direction
-
-DriveMind should mature as the layer that protects meaningful human-AI work from degradation and compounds the value of completed work over time.
+- versioned package manifest
+- plugin packaging notes if needed
+- release checklist
+- public examples from real work traces

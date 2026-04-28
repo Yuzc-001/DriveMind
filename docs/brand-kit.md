@@ -2,26 +2,28 @@
 
 ## Core positioning
 
-DriveMind is an execution-integrity layer for long-horizon human-AI work.
+DriveMind is an execution-ceiling layer for long-horizon human-AI work.
 
 ## Core message
 
-DriveMind exists to keep meaningful work from degrading over time — and to make sure finished work leaves behind stronger future defaults.
+DriveMind exists to keep meaningful work from degrading over time, force stronger next moves when the model is underusing its capability, and make finished work leave behind stronger future defaults.
 
 ## Taglines
 
 ### Primary
-- `Execution integrity for long-horizon human-AI work.`
+- `Execution ceiling for long-horizon human-AI work.`
 
 ### Supporting
 - `Keep meaningful work aligned, bounded, recoverable, and reusable.`
 - `Resist drift. Preserve boundaries. Recover continuity. Compound experience.`
+- `Force the next move to be real.`
 
 ## Messaging rules
 
 ### Emphasize
 - degradation resistance
 - execution integrity
+- execution ceiling
 - continuity fidelity
 - boundary preservation
 - compounding residue
@@ -52,10 +54,10 @@ DriveMind helps human-AI collaboration stay aligned, bounded, recoverable, and m
 
 - `DriveMind is the layer that keeps meaningful human-AI work from degrading.`
 - `Long tasks drift. DriveMind fights the drift.`
-- `Execution integrity + experience compounding for real human-AI work.`
+- `Execution integrity + execution ceiling + experience compounding for real human-AI work.`
 
 ## Bottom line
 
 The DriveMind brand should point to one thing clearly:
 
-# this product exists to resist degradation in meaningful work and to compound useful residue afterward
+# this product exists to resist degradation, raise execution quality, and compound useful residue afterward

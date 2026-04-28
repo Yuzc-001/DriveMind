@@ -1,24 +1,14 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="dm_bg" x1="152" y1="120" x2="864" y2="896" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#23C993"/>
-      <stop offset="0.55" stop-color="#29A8D8"/>
-      <stop offset="1" stop-color="#4466F2"/>
-    </linearGradient>
-    <radialGradient id="dm_shine" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(790 234) rotate(132.57) scale(198)">
-      <stop stop-color="white" stop-opacity="0.3"/>
-      <stop offset="1" stop-color="white" stop-opacity="0"/>
-    </radialGradient>
-    <clipPath id="dm_clip">
-      <rect x="72" y="72" width="880" height="880" rx="236"/>
-    </clipPath>
-  </defs>
-  <g clip-path="url(#dm_clip)">
-    <rect x="72" y="72" width="880" height="880" rx="236" fill="url(#dm_bg)"/>
-    <circle cx="790" cy="234" r="198" fill="url(#dm_shine)"/>
-  </g>
-  <rect x="88" y="88" width="848" height="848" rx="220" stroke="white" stroke-opacity="0.18" stroke-width="16"/>
-  <path d="M320 242H495C697 242 836 351 836 512C836 673 697 782 495 782H320V242ZM438 350V674H489C615 674 712 613 712 512C712 411 615 350 489 350H438Z" fill="white"/>
-  <rect x="556" y="606" width="170" height="38" rx="19" fill="white" fill-opacity="0.94"/>
-  <rect x="516" y="670" width="210" height="38" rx="19" fill="white" fill-opacity="0.76"/>
+  <rect x="64" y="64" width="896" height="896" rx="168" fill="#F7F9FC"/>
+  <path d="M346 246H228L154 320V704L228 778H346" stroke="#071525" stroke-width="64" stroke-linejoin="round"/>
+  <path d="M678 246H796L870 320V704L796 778H678" stroke="#071525" stroke-width="64" stroke-linejoin="round"/>
+  <path d="M512 218V806" stroke="#19D39A" stroke-width="44" stroke-linecap="round" stroke-dasharray="2 74"/>
+  <path d="M212 420H360" stroke="#607084" stroke-width="40"/>
+  <path d="M212 512H360" stroke="#607084" stroke-width="40"/>
+  <path d="M212 604H360" stroke="#607084" stroke-width="40"/>
+  <path d="M664 420H812" stroke="#607084" stroke-width="40"/>
+  <path d="M664 512H812" stroke="#607084" stroke-width="40"/>
+  <path d="M664 604H812" stroke="#607084" stroke-width="40"/>
+  <path d="M512 418L604 512L512 606" stroke="#19D39A" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M512 512H604" stroke="#19D39A" stroke-width="58" stroke-linecap="round"/>
 </svg>

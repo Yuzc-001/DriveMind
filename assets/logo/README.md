@@ -4,27 +4,29 @@
 DriveMind keeps one minimal logo source set in the repository:
 - `drivemind-mark.svg`: square primary mark
 - `drivemind-lockup.svg`: horizontal lockup
+- `drivemind-v0.7-lockup.png`: image2.0-generated v0.7 release lockup
 - `drivemind-logo-philosophy.md`: design philosophy and visual rules.
 
-PNG files are not kept in the repo by default. If a platform needs raster assets, generate them locally from the current source files.
+PNG files are not kept in the repo by default, except release-specific visual assets such as the v0.7 lockup.
 
 ## Design direction
-The current mark is intentionally product-like rather than illustrative:
-- rounded-square container for safety and product coherence
-- a bold `D` monogram for identity and recognition
-- layered bars to suggest memory, review, and operational strata
-- a mint-to-blue gradient to balance energy and trust.
+The v0.7 direction is **Signal Gate**:
+- architectural gate for boundary integrity
+- signal column for evidence entering the task
+- forward vector for authorized execution
+- strong ink and teal palette for infrastructure-grade seriousness
 
 ## Usage
 - GitHub avatar: start from `drivemind-mark.svg`
-- README and docs hero: use `drivemind-lockup.svg`
-- social cards and release art: start from the SVG files and keep clear space around the mark.
+- README and release hero: use `drivemind-v0.7-lockup.png`
+- docs surfaces that need SVG: use `drivemind-lockup.svg`
+- social cards and release art: use `assets/social/drivemind-v0.7-preview.png`
 
 ## Generating local raster exports
 Use [scripts/render-logo.ps1](../../scripts/render-logo.ps1) when PNG outputs are needed locally.
 
 ## Rules
-- do not change the gradient palette without updating the philosophy doc
-- do not introduce extra icons, arrows, or mascot elements into the primary mark
+- do not reintroduce the old gradient-app framing as the primary identity
+- do not introduce brains, robots, mascots, lightning, or generic AI network elements
 - do not create multiple competing primary logos
-- prefer the existing mark and lockup unless a new official variant is documented.
+- keep the v0.7 Signal Gate direction unless a new version explicitly replaces it.

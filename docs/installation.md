@@ -98,6 +98,8 @@ The installers copy everything inside `skill/` into a target folder named `drive
 - `references/`
 - `templates/`
 
+Before copying, the v0.7 installers validate that the package contains the current core references, including `execution-ceiling.md`. Existing installed `drivemind` folders are replaced cleanly so removed or renamed reference files do not linger from older versions.
+
 That keeps one source of truth in this repo while making installs repeatable.
 
 ## Distribution decision
@@ -113,7 +115,7 @@ Why:
 
 ## Updating
 
-Re-run the same install command. The installer overwrites the existing DriveMind skill in place.
+Re-run the same install command. The installer validates the local package and replaces the existing DriveMind skill directory.
 
 ## Uninstalling
 

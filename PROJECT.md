@@ -4,13 +4,13 @@
 DriveMind
 
 ## Category
-Execution-integrity and experience-compounding layer for long-horizon human-AI work
+Execution-integrity, execution-ceiling, and experience-compounding layer for long-horizon human-AI work
 
 ## One-line
-DriveMind helps meaningful work stay aligned, bounded, recoverable, and reusable across time.
+DriveMind helps meaningful work stay aligned, bounded, recoverable, stronger, and reusable across time.
 
 ## Product promise
-DriveMind reduces degradation in long-horizon human-AI work and increases the chance that meaningful work leaves behind stronger future defaults.
+DriveMind reduces degradation in long-horizon human-AI work, pushes the model toward stronger execution when it is underusing its capability, and increases the chance that meaningful work leaves behind stronger future defaults.
 
 ## Core user value
 DriveMind helps human-AI work:
@@ -18,11 +18,12 @@ DriveMind helps human-AI work:
 - resist boundary drift
 - preserve continuity across pauses and session breaks
 - recover from stuckness without fake motion
+- force a stronger next move when shallow execution is below the model's apparent capability
 - close with reusable residue that improves future work
 
 ## The core product problem
 Meaningful human-AI work often does not fail all at once.
-It degrades.
+It degrades, and it often settles for less than the model can actually do.
 
 The primary degradation modes are:
 1. goal drift
@@ -30,6 +31,7 @@ The primary degradation modes are:
 3. continuity decay
 4. stuck degeneration
 5. closure failure
+6. capability underuse
 
 DriveMind exists to push these failure modes down.
 
@@ -38,6 +40,7 @@ DriveMind exists to push these failure modes down.
 - boundary preservation
 - continuity preservation
 - stuck recovery
+- execution ceiling
 - closure & compounding
 - portable installation across skill-based agent environments
 
@@ -60,19 +63,21 @@ DriveMind is source-available under BUSL-1.1 as of March 11, 2026.
 The Change Date is March 11, 2030.
 The Change License is GPL-2.0-or-later.
 
-## v0.6 success criteria
+## v0.7 success criteria
 - long tasks keep a clearer active objective
 - risky work preserves authorization boundaries under pressure
 - pauses and resumes preserve more reasoning fidelity
 - blocked work is more diagnostic and less performatively busy
+- shallow execution is challenged with one stronger concrete move before settling
 - meaningful tasks leave behind stronger future defaults through residue selection
 - the skill stays concise enough to function as a real runtime layer, not a manifesto
 
-## v0.6 boundary
+## v0.7 boundary
 
 ### Included
 - skill behavior packaging
 - anti-degradation references
+- execution-ceiling reference
 - closure / compounding guidance
 - install scripts and distribution docs
 - examples and public product docs
@@ -86,4 +91,4 @@ The Change License is GPL-2.0-or-later.
 - claims of universal agent reliability beyond the execution-integrity scope
 
 ## Product thesis
-DriveMind is the layer that keeps meaningful human-AI work from degrading during long-horizon execution — and turns completed work into stronger future collaboration.
+DriveMind is the layer that keeps meaningful human-AI work from degrading during long-horizon execution, pushes the next move closer to the model's real capability, and turns completed work into stronger future collaboration.

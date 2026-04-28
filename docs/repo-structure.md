@@ -1,64 +1,49 @@
-# Suggested Repository Structure
+# Repository Structure
 
 ```text
 DriveMind/
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   └── config.yml
-│   └── workflows/
-│       └── validate.yml
 ├── README.md
 ├── README.zh-CN.md
 ├── PROJECT.md
 ├── VERSION
 ├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── TRADEMARKS.md
-├── SECURITY.md
-├── CODE_OF_CONDUCT.md
 ├── LICENSE.md
 ├── PROMO.md
 ├── assets/
 │   ├── logo/
-│   │   └── README.md
+│   │   ├── drivemind-v0.7-lockup.png
+│   │   ├── drivemind-mark.svg
+│   │   ├── drivemind-lockup.svg
+│   │   └── drivemind-logo-philosophy.md
 │   └── social/
-│       └── README.md
+│       └── drivemind-v0.7-preview.png
 ├── docs/
-│   ├── brand-kit.md
-│   ├── github-presence.md
+│   ├── drivemind-v0.7-execution-ceiling.md
+│   ├── drivemind-v0.7-stress-cases.md
+│   ├── github-release-v0.7.0.md
 │   ├── installation.md
-│   ├── distribution-strategy.md
-│   ├── licensing.md
-│   ├── activation.md
+│   ├── brand-kit.md
 │   ├── interaction-model.md
 │   ├── principles.md
-│   ├── differentiation.md
 │   ├── use-cases.md
-│   ├── examples.md
-│   ├── roadmap.md
-│   ├── release-notes-v0.1.md
-│   ├── github-release-v0.1.0.md
-│   ├── visual-identity-plan.md
-│   └── origin.md
+│   └── with-vs-without.md
 ├── scripts/
 │   ├── install.ps1
 │   ├── install.sh
 │   ├── bootstrap.ps1
-│   ├── bootstrap.sh
-│   └── render-logo.ps1
-├── skill/
-│   ├── SKILL.md
-│   ├── references/
-│   │   └── mode-guide.md
-│   └── templates/
-│       ├── diary-template.md
-│       ├── review-template.md
-│       └── distill-template.md
-└── examples/
+│   └── bootstrap.sh
+└── skill/
+    ├── SKILL.md
+    ├── references/
+    │   ├── drift-prevention.md
+    │   ├── boundary-preservation.md
+    │   ├── stuck-recovery.md
+    │   ├── execution-ceiling.md
+    │   ├── continuity-preservation.md
+    │   ├── closure-compounding.md
+    │   ├── residue-selection.md
+    │   └── mode-guide.md
+    └── templates/
 ```
 
-This layout keeps the project readable as both:
-- a product repository
-- a portable skill package
-- an installable cross-platform artifact
-- a bilingual, source-available project with clear boundaries and basic governance.
+The current tree is intentionally v0.7-only. Previous release material belongs in Git history, not in the active product surface.

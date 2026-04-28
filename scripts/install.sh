@@ -8,60 +8,89 @@ repo_root="$(cd "$script_dir/.." && pwd)"
 source_dir="$repo_root/skill"
 skill_name="drivemind"
 
-if [[ ! -f "$source_dir/SKILL.md" ]]; then
-  echo "Could not find source skill at $source_dir" >&2
+fail() {
+  echo "DriveMind install error: $*" >&2
   exit 1
-fi
-
-install_skill() {
-  local destination_root="$1"
-  local destination="$destination_root/$skill_name"
-  mkdir -p "$destination"
-  cp -R "$source_dir"/. "$destination"/
-  echo "Installed DriveMind ($target) to $destination"
-  echo "Re-run this installer to update the skill in place."
 }
 
+assert_drivemind_package() {
+  local required=(
+    "SKILL.md"
+    "references/drift-prevention.md"
+    "references/boundary-preservation.md"
+    "references/continuity-preservation.md"
+    "references/stuck-recovery.md"
+    "references/closure-compounding.md"
+    "references/execution-ceiling.md"
+    "templates/review-template.md"
+  )
+
+  for item in "${required[@]}"; do
+    [[ -e "$source_dir/$item" ]] || fail "package is incomplete; missing $item"
+  done
+}
+
+codex_skills_root() {
+  printf '%s\n' "${CODEX_HOME:-$HOME/.codex}/skills"
+}
+
+claude_skills_root() {
+  printf '%s\n' "$HOME/.claude/skills"
+}
+
+install_drivemind_package() {
+  local target_name="$1"
+  local destination_root="$2"
+  local destination="$destination_root/$skill_name"
+
+  mkdir -p "$destination_root"
+  rm -rf "$destination"
+  mkdir -p "$destination"
+
+  cp "$source_dir/SKILL.md" "$destination/"
+  cp -R "$source_dir/references" "$destination/"
+  cp -R "$source_dir/templates" "$destination/"
+
+  [[ -f "$destination/SKILL.md" ]] || fail "install failed; missing $destination/SKILL.md"
+  echo "Installed DriveMind ($target_name) to $destination"
+}
+
+assert_drivemind_package
+
 case "$target" in
-  codex)
-    target="codex-personal"
+  auto)
+    installed_any=0
+    if [[ -d "$HOME/.claude" ]]; then
+      install_drivemind_package "claude-personal" "$(claude_skills_root)"
+      installed_any=1
+    fi
     codex_home="${CODEX_HOME:-$HOME/.codex}"
-    destination_root="$codex_home/skills"
+    if [[ -d "$codex_home" ]]; then
+      install_drivemind_package "codex-personal" "$(codex_skills_root)"
+      installed_any=1
+    fi
+    if [[ "$installed_any" -eq 0 ]]; then
+      install_drivemind_package "claude-personal" "$(claude_skills_root)"
+    fi
     ;;
-  codex-personal)
-    codex_home="${CODEX_HOME:-$HOME/.codex}"
-    destination_root="$codex_home/skills"
+  codex|codex-personal)
+    install_drivemind_package "codex-personal" "$(codex_skills_root)"
     ;;
-  claude)
-    target="claude-personal"
-    destination_root="$HOME/.claude/skills"
-    ;;
-  claude-personal)
-    destination_root="$HOME/.claude/skills"
+  claude|claude-personal)
+    install_drivemind_package "claude-personal" "$(claude_skills_root)"
     ;;
   claude-project)
-    if [[ -z "$path_arg" ]]; then
-      echo "Provide the target project path as the second argument." >&2
-      exit 1
-    fi
-    if [[ ! -d "$path_arg" ]]; then
-      echo "Project path does not exist: $path_arg" >&2
-      exit 1
-    fi
-    destination_root="$path_arg/.claude/skills"
+    [[ -n "$path_arg" ]] || fail "provide the target project path as the second argument"
+    [[ -d "$path_arg" ]] || fail "project path does not exist: $path_arg"
+    install_drivemind_package "claude-project" "$path_arg/.claude/skills"
     ;;
   custom)
-    if [[ -z "$path_arg" ]]; then
-      echo "Provide the destination skills directory as the second argument." >&2
-      exit 1
-    fi
-    destination_root="$path_arg"
+    [[ -n "$path_arg" ]] || fail "provide the destination skills directory as the second argument"
+    install_drivemind_package "custom" "$path_arg"
     ;;
   *)
-    echo "Unknown target: $target" >&2
-    echo "Supported targets: codex-personal | claude-personal | claude-project | custom" >&2
-    exit 1
+    fail "unknown target: $target"
     ;;
 esac
 
-install_skill "$destination_root"
+echo "DriveMind install complete."

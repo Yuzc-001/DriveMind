@@ -37,7 +37,9 @@ jobs:
             'README.zh-CN.md',
             'VERSION',
             'docs/github-presence.md',
-            'docs/github-release-v0.1.0.md',
+            'docs/github-release-v0.7.0.md',
+            'docs/drivemind-v0.7-execution-ceiling.md',
+            'docs/drivemind-v0.7-stress-cases.md',
             'LICENSE.md',
             'PROJECT.md',
             'CHANGELOG.md',
@@ -57,6 +59,55 @@ jobs:
             $missing | ForEach-Object { Write-Error "Missing required file: $_" }
             exit 1
           }
+
+      - name: Smoke test PowerShell installer
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $temp = Join-Path ([System.IO.Path]::GetTempPath()) ("drivemind-smoke-" + [guid]::NewGuid().ToString("n"))
+          New-Item -ItemType Directory -Force -Path $temp | Out-Null
+          try {
+            ./scripts/install.ps1 custom $temp
+            $installed = Join-Path $temp 'drivemind'
+            $required = @(
+              'SKILL.md',
+              'references/drift-prevention.md',
+              'references/boundary-preservation.md',
+              'references/execution-ceiling.md',
+              'templates/review-template.md'
+            )
+            foreach ($item in $required) {
+              if (-not (Test-Path (Join-Path $installed $item))) {
+                throw "Missing installed package file: $item"
+              }
+            }
+          }
+          finally {
+            if (Test-Path $temp) {
+              Remove-Item -LiteralPath $temp -Recurse -Force
+            }
+          }
+
+      - name: Validate text hygiene
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $issues = New-Object System.Collections.Generic.List[string]
+          $files = Get-ChildItem -Recurse -Include *.md,*.svg,*.yml,*.yaml,*.ps1,*.sh,VERSION -File
+          foreach ($file in $files) {
+            $content = Get-Content $file.FullName -Raw
+            if ($content -match [char]7) {
+              $issues.Add("$($file.FullName): contains bell/control character")
+            }
+            if ($file.Extension -eq '.md' -and $content.Contains('`r`n')) {
+              $issues.Add("$($file.FullName): contains literal escaped newline artifact")
+            }
+          }
+          if ($issues.Count -gt 0) {
+            $issues | ForEach-Object { Write-Error $_ }
+            exit 1
+          }
+          Write-Host 'Text hygiene looks good.'
 
       - name: Validate local markdown links
         shell: pwsh

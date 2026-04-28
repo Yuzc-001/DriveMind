@@ -3,7 +3,7 @@
 Thanks for helping improve DriveMind.
 
 ## What good contributions look like
-DriveMind is a product about calm reliability, clear boundaries, and human collaboration. Good contributions usually make the project:
+DriveMind is a product about bounded execution, clear boundaries, and stronger real task work. Good contributions usually make the project:
 - easier to trust
 - easier to install
 - easier to understand

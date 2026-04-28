@@ -1,6 +1,6 @@
 # DriveMind Use Cases
 
-DriveMind v0.6 is for work that risks degrading over time.
+DriveMind v0.7 is for work that risks degrading over time or settling below the model's real capability.
 
 Not every task needs it.
 It matters most when the collaboration itself needs protection and future compounding.
@@ -64,7 +64,19 @@ The value here is:
 
 ---
 
-## 6. Human-AI work that should feel like real collaboration
+## 6. Work that feels below the model's capability
+
+Use DriveMind when the current result is plausible but too shallow.
+
+The value here is:
+- forcing one stronger concrete move
+- adding cheap verification when available
+- turning a vague blocker into a diagnosed blocker
+- producing the missing artifact instead of describing it
+
+---
+
+## 7. Human-AI work that should feel like real collaboration
 
 Use DriveMind when the user wants a collaborator that can:
 - keep going without going reckless
@@ -82,5 +94,6 @@ DriveMind is most useful when the task is not just “hard,” but vulnerable to
 - continuity decay
 - fake-motion recovery
 - closure without residue
+- capability underuse
 
 If none of those are in play, direct execution is usually enough.
