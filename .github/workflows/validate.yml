@@ -40,6 +40,8 @@ jobs:
             'docs/github-release-v0.7.0.md',
             'docs/drivemind-v0.7-execution-ceiling.md',
             'docs/drivemind-v0.7-stress-cases.md',
+            'evals/README.md',
+            'evals/drivemind-v0.7-pressure-cases.json',
             'LICENSE.md',
             'PROJECT.md',
             'CHANGELOG.md',
@@ -51,6 +53,7 @@ jobs:
             'skill/SKILL.md',
             'scripts/install.ps1',
             'scripts/install.sh',
+            'scripts/validate-evals.ps1',
             'scripts/bootstrap.ps1',
             'scripts/bootstrap.sh'
           )
@@ -59,6 +62,12 @@ jobs:
             $missing | ForEach-Object { Write-Error "Missing required file: $_" }
             exit 1
           }
+
+      - name: Validate DriveMind eval suite
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          ./scripts/validate-evals.ps1
 
       - name: Smoke test PowerShell installer
         shell: pwsh
@@ -93,7 +102,7 @@ jobs:
         run: |
           $ErrorActionPreference = 'Stop'
           $issues = New-Object System.Collections.Generic.List[string]
-          $files = Get-ChildItem -Recurse -Include *.md,*.svg,*.yml,*.yaml,*.ps1,*.sh,VERSION -File
+          $files = Get-ChildItem -Recurse -Include *.md,*.json,*.svg,*.yml,*.yaml,*.ps1,*.sh,VERSION -File
           foreach ($file in $files) {
             $content = Get-Content $file.FullName -Raw
             if ($content -match [char]7) {

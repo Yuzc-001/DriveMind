@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- added `evals/drivemind-v0.7-pressure-cases.json` as the canonical pressure suite for v0.7 behavior
+- added `scripts/validate-evals.ps1` and CI coverage for eval suite shape, failure-mode coverage, and reference validity
+
+### Changed
+
+- rewrote `skill/references/mode-guide.md` so normal, execution, and intensive modes each express a concrete execution-ceiling move
+- replaced the static stress-case doc with an eval-linked scoring guide
+
 ## `v0.7.0` - 2026-04-28
 
 ### Changed

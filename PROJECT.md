@@ -79,6 +79,7 @@ The Change License is GPL-2.0-or-later.
 - anti-degradation references
 - execution-ceiling reference
 - closure / compounding guidance
+- v0.7 pressure-case evaluation suite
 - install scripts and distribution docs
 - examples and public product docs
 - governance docs and validation workflow
@@ -86,7 +87,7 @@ The Change License is GPL-2.0-or-later.
 ### Excluded
 - a hosted control plane
 - a dashboard product
-- automatic runtime evaluator implementation
+- automatic model-judged scoring infrastructure
 - broad multi-user orchestration infrastructure
 - claims of universal agent reliability beyond the execution-integrity scope
 

@@ -27,9 +27,13 @@ DriveMind/
 │   ├── principles.md
 │   ├── use-cases.md
 │   └── with-vs-without.md
+├── evals/
+│   ├── README.md
+│   └── drivemind-v0.7-pressure-cases.json
 ├── scripts/
 │   ├── install.ps1
 │   ├── install.sh
+│   ├── validate-evals.ps1
 │   ├── bootstrap.ps1
 │   └── bootstrap.sh
 └── skill/

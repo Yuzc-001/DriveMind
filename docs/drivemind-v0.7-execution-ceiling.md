@@ -76,3 +76,5 @@ DriveMind v0.7 should produce noticeable changes:
 The standard is not whether the output sounds mature.
 
 The standard is whether DriveMind makes the model execute better on real work.
+
+For repeatable pressure cases, see [`../evals/drivemind-v0.7-pressure-cases.json`](../evals/drivemind-v0.7-pressure-cases.json).

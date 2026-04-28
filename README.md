@@ -63,6 +63,7 @@ If a task does not risk one of these, direct execution is usually better.
 - `skill/references/residue-selection.md`
 - `skill/templates/` — review, diary, and distillation templates
 - `scripts/` — hardened installers and bootstrap scripts
+- `evals/` — executable v0.7 pressure cases and pass criteria
 - `docs/` — v0.7 product, install, brand, and release docs
 - `assets/` — Signal Gate visual system
 
@@ -90,6 +91,7 @@ DriveMind installs as one portable `drivemind` skill package for supported skill
 ## Read Next
 
 - [skill/SKILL.md](skill/SKILL.md)
+- [evals/README.md](evals/README.md)
 - [docs/drivemind-v0.7-execution-ceiling.md](docs/drivemind-v0.7-execution-ceiling.md)
 - [docs/drivemind-v0.7-stress-cases.md](docs/drivemind-v0.7-stress-cases.md)
 - [docs/github-release-v0.7.0.md](docs/github-release-v0.7.0.md)

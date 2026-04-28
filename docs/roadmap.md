@@ -9,20 +9,20 @@ Current shape:
 - compact runtime skill
 - Signal Gate identity
 - execution-ceiling reference
+- mode guide tied to concrete ceiling moves
 - anti-drift, boundary, stuck, continuity, and closure references
 - hardened installers
-- stress cases for early stop, fake retry, weak blocker diagnosis, shallow deliverable, risky momentum, and capability underuse
+- structured pressure cases for the full v0.7 failure model
+- CI validation for eval shape, failure-mode coverage, and reference integrity
 
-## Next: Evaluation Harness
+## Next: Behavioral Evidence
 
 Target:
 
-- turn stress cases into repeatable checks
-- score whether DriveMind changes the next action, not just the wording
-- test early-stop prevention
-- test fake-retry prevention
-- test handoff fidelity
-- test residue quality
+- collect baseline responses without DriveMind
+- collect DriveMind responses against the same pressure suite
+- publish scored transcripts for early-stop prevention, fake-retry prevention, boundary preservation, handoff fidelity, and residue quality
+- use failures to tighten the smallest relevant reference
 
 ## Later: Distribution Hardening
 
